@@ -21,10 +21,10 @@ import java.util.Map;
 public class ImageResolverBusinessImpl implements ImageResolverBusiness {
 
     // Logger
-    protected final Logger logger = LoggerFactory.getLogger(getClass());
+    final Logger logger = LoggerFactory.getLogger(getClass());
 
     @Override
-    public Map<String, String> loadImages(TypeRevolver typeRevolver) {
+    public Map<String, String> loadImages(final TypeRevolver typeRevolver) {
 
         ImageRevolverDAOImpl imageResolverDaoimpl = new ImageRevolverDAOImpl();
 
@@ -45,11 +45,15 @@ public class ImageResolverBusinessImpl implements ImageResolverBusiness {
         Map<String, String> myMap = new HashMap();
 
         myRawMap.forEach((k, v) ->
-                myMap.put(k,getImageData(v))
+                myMap.put(k, getImageData(v))
         );
         return myMap;
     }
 
+    /**
+     * @param image content of image
+     * @return Return base64 content
+     */
     private String getImageData(final byte[] image){
         String base64 = Base64Utils.encodeToString(image);
         base64 = "data:image/png;base64,"+base64;

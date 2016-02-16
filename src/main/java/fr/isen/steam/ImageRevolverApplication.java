@@ -7,7 +7,7 @@ import org.springframework.context.ApplicationContext;
 import java.util.Arrays;
 
 /**
- * Main class, starting Spring runtime and the application
+ * Main class, starting Spring runtime and the application.
  */
 @SpringBootApplication
 public class ImageRevolverApplication {

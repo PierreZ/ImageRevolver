@@ -20,10 +20,15 @@ import java.util.Map;
  */
 public class ImageRevolverDAOImpl implements ImageRevolverDAO {
 
-    // Logger
-    protected final Logger logger = LoggerFactory.getLogger(getClass());
+    /**
+     * Logger
+      */
+    final Logger logger = LoggerFactory.getLogger(getClass());
 
-    //private String Path = "/src/img/revolver/";
+    /**
+     * Path and root path
+      */
+    private String Path = "/src/img/revolver/";
     private String rootPath = "/Users/pierrezemb/workspace/web/imgs";
 
     // array of supported extensions
@@ -37,7 +42,7 @@ public class ImageRevolverDAOImpl implements ImageRevolverDAO {
      */
     @Override
     public Map<String, byte[]> loadImagesMain() {
-        return this.loadImages(rootPath+"/main/");
+        return this.loadImages(rootPath + "/main/");
     }
 
     /**
@@ -46,23 +51,24 @@ public class ImageRevolverDAOImpl implements ImageRevolverDAO {
      */
     @Override
     public Map<String, byte[]> loadImagesPromo() {
-        return this.loadImages(rootPath+"/promo/");
+        return this.loadImages(rootPath + "/promo/");
     }
 
     /**
      * This function is crawling the right directory for images.
      * @param path of directory
      * @return Map<String, byte[]> of files. Key is name, value is content of file
+     * @throws SteamException
      */
-    private Map<String, byte[]> loadImages(String path) throws SteamException {
+    private Map<String, byte[]> loadImages(final String path) throws SteamException {
 
         Map<String, byte[]> myMap = new HashMap();
         File dir = new File(String.valueOf(path));
         try {
             // Checking if there's some images
-            if  ((dir.listFiles(IMAGE_FILTER)).length==0){
-            myMap.put("blank.png",Files.readAllBytes(Paths.get(this.rootPath+"/blank.png")));
-            }else {
+            if  ((dir.listFiles(IMAGE_FILTER)).length == 0){
+            myMap.put("blank.png", Files.readAllBytes(Paths.get(this.rootPath + "/blank.png")));
+            } else {
 
                 for (final File f : dir.listFiles(IMAGE_FILTER)) {
 
@@ -73,7 +79,7 @@ public class ImageRevolverDAOImpl implements ImageRevolverDAO {
 
                 }
             }
-        }catch (IOException e){
+        } catch (IOException e){
             throw new SteamException("Error while adding file to map: ", e);
         }
         return myMap;
@@ -103,10 +109,10 @@ public class ImageRevolverDAOImpl implements ImageRevolverDAO {
     }
 
     /**
-     *
+     * Setting path for Testing
      * @param rootPath
      */
-    public void setRootPath(String rootPath) {
+    public void setRootPath(final String rootPath) {
         this.rootPath = rootPath;
     }
 }

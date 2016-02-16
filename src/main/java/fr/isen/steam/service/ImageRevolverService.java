@@ -18,7 +18,7 @@ import javax.inject.Inject;
 public class ImageRevolverService {
 
     @Inject
-    ImageResolverBusiness business;
+    private ImageResolverBusiness business;
 
     @RequestMapping("/health")
     public String health() {

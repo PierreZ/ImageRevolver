@@ -6,8 +6,14 @@ import java.util.Map;
 
 /**
  * Created by pierrezemb on 05/02/2016.
+ * Interface for Business
  */
 public interface ImageResolverBusiness {
 
-    Map<String, String> loadImages(TypeRevolver typeRevolver);
+    /**
+     *
+     * @param typeRevolver type of Data
+     * @return Map of data
+     */
+    Map<String, String> loadImages(final TypeRevolver typeRevolver);
 }
