@@ -26,6 +26,7 @@ public class ImageRevolverDAOImplTests {
     ImageRevolverDAOImpl dao;
 
     private final String TestPath = "src/main/resources/images";
+    private final String TestEmptyPath = TestPath + "/empty";
 
     @Test
     public void getImagesMAIN() throws SteamException {
@@ -59,7 +60,7 @@ public class ImageRevolverDAOImplTests {
     public void getNoImage() throws SteamException {
 
         // Testing MAIN with 2 images
-        dao.setRootPath(TestPath + "/empty");
+        dao.setRootPath(TestEmptyPath);
         Map<String, byte[]> mymap = dao.loadImagesMain();
 
         Set<String> keys = mymap.keySet();
