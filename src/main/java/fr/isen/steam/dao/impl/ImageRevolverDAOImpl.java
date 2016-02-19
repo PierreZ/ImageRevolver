@@ -70,18 +70,21 @@ public class ImageRevolverDAOImpl implements ImageRevolverDAO {
         Map<String, byte[]> myMap = new HashMap();
         File dir = new File(String.valueOf(path));
         try {
-            // Checking if there's some images
-            if (dir.list(IMAGE_FILTER).length == 0){
-                // Getting white image
-                myMap.put("white.png", Files.readAllBytes(Paths.get(rootPath + "/white.png")));
-            } else {
-                for (final File f : dir.listFiles(IMAGE_FILTER)) {
+            if (dir.isDirectory()) {
+                String[] files = dir.list(IMAGE_FILTER);
 
-                    if (logger.isDebugEnabled()) {
-                        logger.debug(f.toString());
+                if (files.length > 0) {
+                    for (final File f : dir.listFiles(IMAGE_FILTER)) {
+
+                        if (logger.isDebugEnabled()) {
+                            logger.debug(f.toString());
+                        }
+                        myMap.put(f.getName().toString(), Files.readAllBytes(Paths.get(f.toString())));
+
                     }
-                    myMap.put(f.getName().toString(), Files.readAllBytes(Paths.get(f.toString())));
-
+                } else {
+                    // Getting white image
+                    myMap.put("white.png", Files.readAllBytes(Paths.get(rootPath + "/white.png")));
                 }
             }
         } catch (IOException e){
