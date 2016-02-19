@@ -3,4 +3,4 @@ jdk:
   - oraclejdk8
 
 ## do the tests
-script: mvn test -B compile -X -e
+script: mvn test -B compile -e
