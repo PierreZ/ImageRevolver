@@ -69,7 +69,7 @@ public class ImageRevolverDAOImpl implements ImageRevolverDAO {
         File dir = new File(String.valueOf(path));
         try {
             // Checking if there's some images
-            if (dir.list(IMAGE_FILTER).length == 0){
+            if (dir.list(IMAGE_FILTER) == null){
                 // Getting white image
                 myMap.put("white.png", Files.readAllBytes(Paths.get(rootPath + "/white.png")));
             } else {

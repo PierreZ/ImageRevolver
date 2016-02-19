@@ -3,7 +3,6 @@
   <component name="ChangeListManager">
     <list default="true" id="5e8951f0-12ff-4f8b-b87e-92d8af133ccc" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.travis.yml" afterPath="$PROJECT_DIR$/.travis.yml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/fr/isen/steam/dao/impl/ImageRevolverDAOImpl.java" afterPath="$PROJECT_DIR$/src/main/java/fr/isen/steam/dao/impl/ImageRevolverDAOImpl.java" />
     </list>
     <ignored path="ImageRevolver.iws" />
@@ -33,23 +32,8 @@
           <file leaf-file-name="ImageRevolverDAOImpl.java" pinned="false" current-in-tab="true">
             <entry file="file://$PROJECT_DIR$/src/main/java/fr/isen/steam/dao/impl/ImageRevolverDAOImpl.java">
               <provider selected="true" editor-type-id="text-editor">
-                <state vertical-scroll-proportion="0.9756888">
-                  <caret line="76" column="0" selection-start-line="76" selection-start-column="0" selection-end-line="76" selection-end-column="0" />
-                  <folding>
-                    <element signature="e#1254#1255#0" expanded="true" />
-                    <element signature="e#1313#1314#0" expanded="true" />
-                    <element signature="e#1498#1499#0" expanded="true" />
-                    <element signature="e#1558#1559#0" expanded="true" />
-                  </folding>
-                </state>
-              </provider>
-            </entry>
-          </file>
-          <file leaf-file-name="pom.xml" pinned="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/pom.xml">
-              <provider selected="true" editor-type-id="text-editor">
-                <state vertical-scroll-proportion="-7.8627453">
-                  <caret line="58" column="18" selection-start-line="58" selection-start-column="18" selection-end-line="58" selection-end-column="18" />
+                <state vertical-scroll-proportion="0.33333334">
+                  <caret line="71" column="48" selection-start-line="71" selection-start-column="48" selection-end-line="71" selection-end-column="48" />
                   <folding />
                 </state>
               </provider>
@@ -58,12 +42,12 @@
         </leaf>
       </split-first>
       <split-second>
-        <leaf>
+        <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
           <file leaf-file-name="ImageRevolverDAOImplTests.java" pinned="false" current-in-tab="true">
             <entry file="file://$PROJECT_DIR$/src/test/java/fr/isen/steam/utils/ImageRevolverDAOImplTests.java">
               <provider selected="true" editor-type-id="text-editor">
-                <state vertical-scroll-proportion="0.6596434">
-                  <caret line="63" column="39" selection-start-line="63" selection-start-column="39" selection-end-line="63" selection-end-column="39" />
+                <state vertical-scroll-proportion="1.1828479">
+                  <caret line="62" column="39" selection-start-line="62" selection-start-column="39" selection-end-line="62" selection-end-column="39" />
                   <folding />
                 </state>
               </provider>
@@ -124,9 +108,9 @@
         <option value="$PROJECT_DIR$/src/main/java/fr/isen/steam/ImageRevolverApplication.java" />
         <option value="$PROJECT_DIR$/src/test/java/fr/isen/steam/utils/ImageRevolverServiceTests.java" />
         <option value="$PROJECT_DIR$/src/test/java/fr/isen/steam/utils/ImageRevolverIntegration.java" />
-        <option value="$PROJECT_DIR$/src/test/java/fr/isen/steam/utils/ImageRevolverDAOImplTests.java" />
         <option value="$PROJECT_DIR$/pom.xml" />
         <option value="$PROJECT_DIR$/.travis.yml" />
+        <option value="$PROJECT_DIR$/src/test/java/fr/isen/steam/utils/ImageRevolverDAOImplTests.java" />
         <option value="$PROJECT_DIR$/src/main/java/fr/isen/steam/dao/impl/ImageRevolverDAOImpl.java" />
       </list>
     </option>
@@ -199,7 +183,6 @@
     <panes>
       <pane id="Scope" />
       <pane id="PackagesPane" />
-      <pane id="Scratches" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -354,6 +337,7 @@
           </PATH>
         </subPane>
       </pane>
+      <pane id="Scratches" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -940,10 +924,10 @@
     <recent_temporary>
       <list size="5">
         <item index="0" class="java.lang.String" itemvalue="JUnit.All in ImageRevolver" />
-        <item index="1" class="java.lang.String" itemvalue="JUnit.ImageRevolverDAOImplTests.getNoImage" />
-        <item index="2" class="java.lang.String" itemvalue="JUnit.ImageRevolverDAOImplTests" />
-        <item index="3" class="java.lang.String" itemvalue="JUnit.ImageRevolverDAOImplTests.getImagesMAIN" />
-        <item index="4" class="java.lang.String" itemvalue="JUnit.ImageRevolverDAOImplTests.getImagesPROMO" />
+        <item index="1" class="java.lang.String" itemvalue="JUnit.ImageRevolverDAOImplTests.getImagesPROMO" />
+        <item index="2" class="java.lang.String" itemvalue="JUnit.ImageRevolverDAOImplTests.getNoImage" />
+        <item index="3" class="java.lang.String" itemvalue="JUnit.ImageRevolverDAOImplTests" />
+        <item index="4" class="java.lang.String" itemvalue="JUnit.ImageRevolverDAOImplTests.getImagesMAIN" />
       </list>
     </recent_temporary>
   </component>
@@ -968,18 +952,16 @@
       <workItem from="1455651059491" duration="1227000" />
       <workItem from="1455890715688" duration="1225000" />
       <workItem from="1455891998402" duration="5359000" />
+      <workItem from="1455899688548" duration="78000" />
     </task>
     <servers />
   </component>
   <component name="TestHistory">
-    <history-entry file="All_in_ImageRevolver - 2016.02.19 at 15h 54m 41s.xml">
+    <history-entry file="All_in_ImageRevolver - 2016.02.19 at 17h 36m 05s.xml">
       <configuration name="All in ImageRevolver" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="All_in_ImageRevolver - 2016.02.19 at 16h 21m 09s.xml">
-      <configuration name="All in ImageRevolver" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="All_in_ImageRevolver - 2016.02.19 at 17h 04m 16s.xml">
-      <configuration name="All in ImageRevolver" configurationId="JUnit" />
+    <history-entry file="ImageRevolverDAOImplTests_getImagesPROMO - 2016.02.19 at 17h 35m 37s.xml">
+      <configuration name="ImageRevolverDAOImplTests.getImagesPROMO" configurationId="JUnit" />
     </history-entry>
     <history-entry file="ImageRevolverDAOImplTests_getNoImage - 2016.02.19 at 15h 52m 15s.xml">
       <configuration name="ImageRevolverDAOImplTests.getNoImage" configurationId="JUnit" />
@@ -1002,13 +984,16 @@
     <history-entry file="ImageRevolverDAOImplTests_getNoImage - 2016.02.19 at 16h 52m 40s.xml">
       <configuration name="ImageRevolverDAOImplTests.getNoImage" configurationId="JUnit" />
     </history-entry>
+    <history-entry file="ImageRevolverDAOImplTests_getNoImage - 2016.02.19 at 17h 35m 04s.xml">
+      <configuration name="ImageRevolverDAOImplTests.getNoImage" configurationId="JUnit" />
+    </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="36427000" />
+    <option name="totallyTimeSpent" value="36505000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="23" width="1920" height="1053" extended-state="6" />
-    <editor active="false" />
+    <editor active="true" />
     <layout>
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="12" side_tool="false" content_ui="tabs" />
@@ -1017,7 +1002,7 @@
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="true" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.32882413" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.32778355" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Spring" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3290653" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="CheckStyle" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
@@ -1091,12 +1076,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="21" column="0" selection-start-line="21" selection-start-column="0" selection-end-line="21" selection-end-column="0" />
-          <folding>
-            <element signature="e#1254#1255#0" expanded="true" />
-            <element signature="e#1313#1314#0" expanded="true" />
-            <element signature="e#1498#1499#0" expanded="true" />
-            <element signature="e#1558#1559#0" expanded="true" />
-          </folding>
+          <folding />
         </state>
       </provider>
     </entry>
@@ -1118,7 +1098,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="28" column="99" selection-start-line="28" selection-start-column="99" selection-end-line="28" selection-end-column="99" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1169,12 +1148,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="55" column="31" selection-start-line="55" selection-start-column="12" selection-end-line="55" selection-end-column="31" />
-          <folding>
-            <element signature="e#1254#1255#0" expanded="true" />
-            <element signature="e#1313#1314#0" expanded="true" />
-            <element signature="e#1498#1499#0" expanded="true" />
-            <element signature="e#1558#1559#0" expanded="true" />
-          </folding>
+          <folding />
         </state>
       </provider>
     </entry>
@@ -1233,7 +1207,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1377,7 +1350,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="20" column="12" selection-start-line="20" selection-start-column="12" selection-end-line="20" selection-end-column="12" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1418,36 +1390,30 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.12155592">
           <caret line="5" column="7" selection-start-line="5" selection-start-column="7" selection-end-line="5" selection-end-column="30" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/pom.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-17.875">
+          <caret line="58" column="18" selection-start-line="58" selection-start-column="18" selection-end-line="58" selection-end-column="18" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/test/java/fr/isen/steam/utils/ImageRevolverDAOImplTests.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.6596434">
-          <caret line="63" column="39" selection-start-line="63" selection-start-column="39" selection-end-line="63" selection-end-column="39" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/pom.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-7.8627453">
-          <caret line="58" column="18" selection-start-line="58" selection-start-column="18" selection-end-line="58" selection-end-column="18" />
+        <state vertical-scroll-proportion="1.1828479">
+          <caret line="62" column="39" selection-start-line="62" selection-start-column="39" selection-end-line="62" selection-end-column="39" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/fr/isen/steam/dao/impl/ImageRevolverDAOImpl.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.9756888">
-          <caret line="76" column="0" selection-start-line="76" selection-start-column="0" selection-end-line="76" selection-end-column="0" />
-          <folding>
-            <element signature="e#1254#1255#0" expanded="true" />
-            <element signature="e#1313#1314#0" expanded="true" />
-            <element signature="e#1498#1499#0" expanded="true" />
-            <element signature="e#1558#1559#0" expanded="true" />
-          </folding>
+        <state vertical-scroll-proportion="0.33333334">
+          <caret line="71" column="48" selection-start-line="71" selection-start-column="48" selection-end-line="71" selection-end-column="48" />
+          <folding />
         </state>
       </provider>
     </entry>
