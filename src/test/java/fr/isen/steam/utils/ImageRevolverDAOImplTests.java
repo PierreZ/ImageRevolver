@@ -25,8 +25,8 @@ public class ImageRevolverDAOImplTests {
     @Autowired
     ImageRevolverDAOImpl dao;
 
-    private final String TestPath = "src/main/resources/images";
-    private final String TestEmptyPath = TestPath + "/empty";
+    private final String TestPath = "src/main/resources/test/revolver";
+    private final String TestEmptyPath = "src/main/resources/test/revolver_empty";
 
     @Test
     public void getImagesMAIN() throws SteamException {
@@ -41,6 +41,7 @@ public class ImageRevolverDAOImplTests {
 
         Assert.assertTrue(keys.contains("1.gif"));
         Assert.assertTrue(keys.contains("2.gif"));
+
     }
     @Test
     public void getImagesPROMO() throws SteamException {
@@ -60,12 +61,15 @@ public class ImageRevolverDAOImplTests {
     public void getNoImage() throws SteamException {
 
         // Testing MAIN with 2 images
+
         dao.setRootPath(TestEmptyPath);
         Map<String, byte[]> mymap = dao.loadImagesMain();
 
         Set<String> keys = mymap.keySet();
 
-        Assert.assertEquals(mymap.size(),1);
+        System.out.println(keys.size());
+
+        Assert.assertEquals(mymap.size(), 1);
         Assert.assertTrue(keys.contains("white.png"));
     }
 }

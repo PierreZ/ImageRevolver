@@ -32,7 +32,9 @@ public class ImageRevolverDAOImpl implements ImageRevolverDAO {
      * Path and root path
       */
    // private String rootPath = "/src/img/revolver/";
-    private String rootPath = "/Users/pierrezemb/workspace/web/imgs";
+    private String rootPath = "/Users/pierrezemb/Desktop/yolo";
+
+
 
     // array of supported extensions
     static final String[] EXTENSIONS = new String[]{
@@ -69,7 +71,7 @@ public class ImageRevolverDAOImpl implements ImageRevolverDAO {
         File dir = new File(String.valueOf(path));
         try {
             // Checking if there's some images
-            if (dir.list(IMAGE_FILTER) == null){
+            if (dir.list(IMAGE_FILTER).length == 0){
                 // Getting white image
                 myMap.put("white.png", Files.readAllBytes(Paths.get(rootPath + "/white.png")));
             } else {

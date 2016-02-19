@@ -18,45 +18,64 @@ import java.util.Map;
  */
 
 @Component
-public class ImageResolverBusinessImpl implements ImageResolverBusiness {
+public class ImageRevolverBusinessImpl implements ImageResolverBusiness {
 
-    // Logger
+    /**
+     * Logger
+     */
     final Logger logger = LoggerFactory.getLogger(getClass());
+
+    /**
+     * DAO
+     */
+    private ImageRevolverDAOImpl imageResolverDaoimpl;
+
+    public ImageRevolverBusinessImpl() {
+        imageResolverDaoimpl = new ImageRevolverDAOImpl();
+    }
 
     @Override
     public Map<String, String> loadImages(final TypeRevolver typeRevolver) {
 
-        ImageRevolverDAOImpl imageResolverDaoimpl = new ImageRevolverDAOImpl();
+        System.out.println("dans load");
+        Map<String, byte[]> fromDao = getDAO(typeRevolver);
 
-        Map<String, byte[]> myRawMap = new HashMap();
+        Map<String, String> myMap = new HashMap();
+
+        fromDao.forEach((k, v) ->
+                myMap.put(k, getImageData(v))
+        );
+        return myMap;
+    }
+
+    public Map<String, byte[]> getDAO(final TypeRevolver typeRevolver){
 
         switch (typeRevolver) {
             case MAIN:
-                myRawMap = imageResolverDaoimpl.loadImagesMain();
-                break;
+                return imageResolverDaoimpl.loadImagesMain();
             case PROMO:
-                myRawMap = imageResolverDaoimpl.loadImagesPromo();
-                break;
+                return imageResolverDaoimpl.loadImagesMain();
             // Default will be OTHER
             default:
                 throw new SteamException("Actuellement non supporté");
         }
-
-        Map<String, String> myMap = new HashMap();
-
-        myRawMap.forEach((k, v) ->
-                myMap.put(k, getImageData(v))
-        );
-        return myMap;
     }
 
     /**
      * @param image content of image
      * @return Return base64 content
      */
-    private String getImageData(final byte[] image){
+    public String getImageData(final byte[] image){
         String base64 = Base64Utils.encodeToString(image);
-        base64 = "data:image/png;base64,"+base64;
+        base64 = "data:image/png;base64," + base64;
         return base64;
+    }
+
+    public ImageRevolverDAOImpl getImageResolverDaoimpl() {
+        return imageResolverDaoimpl;
+    }
+
+    public void setImageResolverDaoimpl(ImageRevolverDAOImpl imageResolverDaoimpl) {
+        this.imageResolverDaoimpl = imageResolverDaoimpl;
     }
 }
