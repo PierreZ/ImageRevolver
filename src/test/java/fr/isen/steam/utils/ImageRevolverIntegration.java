@@ -35,7 +35,7 @@ public class ImageRevolverIntegration {
 
     @Before
     public void setUp() throws Exception {
-        this.base = new URL("http://localhost:" + port + "/health");
+        this.base = new URL("http://localhost:" + port + "/api/health");
         template = new TestRestTemplate();
     }
 

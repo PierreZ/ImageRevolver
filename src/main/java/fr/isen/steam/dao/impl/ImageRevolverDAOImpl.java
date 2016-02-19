@@ -5,6 +5,9 @@ import fr.isen.steam.utils.SteamException;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
+import java.awt.*;
+import java.awt.image.BufferedImage;
+import java.awt.image.DataBufferByte;
 import java.io.File;
 import java.io.FilenameFilter;
 import java.io.IOException;
@@ -28,7 +31,7 @@ public class ImageRevolverDAOImpl implements ImageRevolverDAO {
     /**
      * Path and root path
       */
-    private String Path = "/src/img/revolver/";
+   // private String rootPath = "/src/img/revolver/";
     private String rootPath = "/Users/pierrezemb/workspace/web/imgs";
 
     // array of supported extensions
@@ -42,7 +45,7 @@ public class ImageRevolverDAOImpl implements ImageRevolverDAO {
      */
     @Override
     public Map<String, byte[]> loadImagesMain() {
-        return this.loadImages(rootPath + "/main/");
+        return this.loadImages(rootPath + "/MAIN/");
     }
 
     /**
@@ -51,7 +54,7 @@ public class ImageRevolverDAOImpl implements ImageRevolverDAO {
      */
     @Override
     public Map<String, byte[]> loadImagesPromo() {
-        return this.loadImages(rootPath + "/promo/");
+        return this.loadImages(rootPath + "/PROMO/");
     }
 
     /**
@@ -67,9 +70,9 @@ public class ImageRevolverDAOImpl implements ImageRevolverDAO {
         try {
             // Checking if there's some images
             if  ((dir.listFiles(IMAGE_FILTER)).length == 0){
-            myMap.put("blank.png", Files.readAllBytes(Paths.get(this.rootPath + "/blank.png")));
+                // Getting white image
+                myMap.put("white.png", Files.readAllBytes(Paths.get(rootPath + "/white.png")));
             } else {
-
                 for (final File f : dir.listFiles(IMAGE_FILTER)) {
 
                     if (logger.isDebugEnabled()) {

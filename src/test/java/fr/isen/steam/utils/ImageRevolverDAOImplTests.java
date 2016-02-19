@@ -25,15 +25,7 @@ public class ImageRevolverDAOImplTests {
     @Autowired
     ImageRevolverDAOImpl dao;
 
-    /**
-     * Should containers
-     ├── MAIN
-     │   ├── email-secure.png
-     │   └── email.png
-     └── PROMO
-         └── email-unsecure.png
-     */
-    private final String TestPath = "/Users/pierrezemb/Desktop/test";
+    private final String TestPath = "src/main/resources/images";
 
     @Test
     public void getImagesMAIN() throws SteamException {
@@ -46,8 +38,8 @@ public class ImageRevolverDAOImplTests {
 
         Assert.assertEquals(mymap.size(),2);
 
-        Assert.assertTrue(keys.contains("email-secure.png"));
-        Assert.assertTrue(keys.contains("email.png"));
+        Assert.assertTrue(keys.contains("1.gif"));
+        Assert.assertTrue(keys.contains("2.gif"));
     }
     @Test
     public void getImagesPROMO() throws SteamException {
@@ -59,7 +51,20 @@ public class ImageRevolverDAOImplTests {
 
         Set<String> keys = mymap.keySet();
 
-        Assert.assertTrue(keys.contains("email-unsecure.png"));
+        Assert.assertTrue(keys.contains("1.gif"));
         Assert.assertEquals(mymap.size(),1);
+    }
+
+    @Test
+    public void getNoImage() throws SteamException {
+
+        // Testing MAIN with 2 images
+        dao.setRootPath(TestPath + "/empty");
+        Map<String, byte[]> mymap = dao.loadImagesMain();
+
+        Set<String> keys = mymap.keySet();
+
+        Assert.assertEquals(mymap.size(),1);
+        Assert.assertTrue(keys.contains("white.png"));
     }
 }
