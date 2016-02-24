@@ -15,12 +15,14 @@ import java.nio.file.Files;
 import java.nio.file.Paths;
 import java.util.HashMap;
 import java.util.Map;
+import org.springframework.stereotype.Component;
 
 /**
  * Created by pierrezemb on 05/02/2016.
  * This class is the DAO of ImageRevolver.
  * Handling File system
  */
+@Component
 public class ImageRevolverDAOImpl implements ImageRevolverDAO {
 
     /**
@@ -31,10 +33,7 @@ public class ImageRevolverDAOImpl implements ImageRevolverDAO {
     /**
      * Path and root path
       */
-   // private String rootPath = "/src/img/revolver/";
-    private String rootPath = "/Users/pierrezemb/Desktop/yolo";
-
-
+   private String rootPath = "src/img/revolver";
 
     // array of supported extensions
     static final String[] EXTENSIONS = new String[]{

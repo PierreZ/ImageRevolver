@@ -47,7 +47,7 @@ public class Interceptor {
             logger.error(e.toString());
             throw e;
         }
-        if (logger.isDebugEnabled() ) {
+        if (logger.isDebugEnabled()) {
             logger.debug("Exiting: " + joinPoint.getSignature().getName() + " with returns" + o);
         }
         return o;

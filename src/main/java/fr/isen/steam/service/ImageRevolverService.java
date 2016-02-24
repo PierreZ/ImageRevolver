@@ -20,18 +20,29 @@ public class ImageRevolverService {
     @Inject
     private ImageResolverBusiness business;
 
+    /**
+     * Endpoint for health status
+     * @return
+     */
     @RequestMapping("/health")
     public String health() {
         return "up";
     }
 
-
+    /**
+     * Endpoint for API version
+     * @return
+     */
     @RequestMapping("/version")
     public String version() {
         return "v1";
     }
 
-
+    /**
+     * Endpoint for getting images
+     * @param typeRevolver
+     * @return
+     */
     @RequestMapping("/images/{typeRevolver}")
     public Map<String, String> getImages(@PathVariable("typeRevolver") TypeRevolver typeRevolver) {
         return this.business.loadImages(typeRevolver);

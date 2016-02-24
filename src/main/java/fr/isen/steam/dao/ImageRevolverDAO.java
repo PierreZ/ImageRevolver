@@ -8,6 +8,15 @@ import java.util.Map;
  */
 public interface ImageRevolverDAO {
 
+    /**
+     * Loin images from MAIN
+     * @return map of files
+     */
     Map<String, byte[]> loadImagesMain();
+
+    /**
+     * Load images from Promo
+     * @return map of files
+     */
     Map<String, byte[]> loadImagesPromo();
 }

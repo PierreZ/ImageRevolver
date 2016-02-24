@@ -3,8 +3,8 @@ package fr.isen.steam.utils;
 
 import fr.isen.steam.business.impl.ImageRevolverBusinessImpl;
 import fr.isen.steam.dao.impl.ImageRevolverDAOImpl;
-
 import fr.isen.steam.enumeration.TypeRevolver;
+
 import org.junit.Test;
 
 import org.mockito.Mock;
@@ -18,11 +18,9 @@ import static org.mockito.Mockito.*;
 
 
 import java.io.IOException;
-import java.nio.charset.StandardCharsets;
 import java.nio.file.Files;
 import java.nio.file.Paths;
 import java.util.HashMap;
-import java.util.Map;
 
 
 /**
@@ -68,7 +66,7 @@ public class ImageRevolverBusinessImplTest {
         }
 
         when(business.getDAO(TypeRevolver.MAIN)).thenReturn(daoResult);
-        business.setImageResolverDaoimpl(dao);
+        business.setImageResolverDao(dao);
 
         // Loading images
         business.loadImages(TypeRevolver.MAIN);
@@ -82,7 +80,7 @@ public class ImageRevolverBusinessImplTest {
 
         when(business.getDAO(TypeRevolver.MAIN)).thenReturn(daoResult);
         dao.setRootPath(EmptyTestPath);
-        business.setImageResolverDaoimpl(dao);
+        business.setImageResolverDao(dao);
 
         // Loading images
         business.loadImages(TypeRevolver.MAIN);
@@ -91,4 +89,3 @@ public class ImageRevolverBusinessImplTest {
     }
 
 }
-

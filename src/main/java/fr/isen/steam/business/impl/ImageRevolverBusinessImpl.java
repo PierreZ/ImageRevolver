@@ -1,11 +1,12 @@
 package fr.isen.steam.business.impl;
 
+import fr.isen.steam.dao.ImageRevolverDAO;
 import fr.isen.steam.enumeration.TypeRevolver;
 import fr.isen.steam.business.ImageResolverBusiness;
-import fr.isen.steam.dao.impl.ImageRevolverDAOImpl;
 import fr.isen.steam.utils.SteamException;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
 import org.springframework.util.Base64Utils;
 
@@ -28,12 +29,14 @@ public class ImageRevolverBusinessImpl implements ImageResolverBusiness {
     /**
      * DAO
      */
-    private ImageRevolverDAOImpl imageResolverDaoimpl;
+    @Autowired
+    private ImageRevolverDAO imageResolverDAO;
 
-    public ImageRevolverBusinessImpl() {
-        imageResolverDaoimpl = new ImageRevolverDAOImpl();
-    }
-
+    /**
+     *
+     * @param typeRevolver type of Data
+     * @return The final map of files that will be jsonnify
+     */
     @Override
     public Map<String, String> loadImages(final TypeRevolver typeRevolver) {
 
@@ -48,13 +51,18 @@ public class ImageRevolverBusinessImpl implements ImageResolverBusiness {
         return myMap;
     }
 
+    /**
+     * Get dao from DAO
+     * @param typeRevolver
+     * @return map of file in byte format
+     */
     public Map<String, byte[]> getDAO(final TypeRevolver typeRevolver){
 
         switch (typeRevolver) {
             case MAIN:
-                return imageResolverDaoimpl.loadImagesMain();
+                return imageResolverDAO.loadImagesMain();
             case PROMO:
-                return imageResolverDaoimpl.loadImagesMain();
+                return imageResolverDAO.loadImagesMain();
             // Default will be OTHER
             default:
                 throw new SteamException("Actuellement non supporté");
@@ -71,11 +79,19 @@ public class ImageRevolverBusinessImpl implements ImageResolverBusiness {
         return base64;
     }
 
-    public ImageRevolverDAOImpl getImageResolverDaoimpl() {
-        return imageResolverDaoimpl;
+    /**
+     *
+     * @return instance of DAO
+     */
+    public ImageRevolverDAO getimageResolverDAO() {
+        return imageResolverDAO;
     }
 
-    public void setImageResolverDaoimpl(ImageRevolverDAOImpl imageResolverDaoimpl) {
-        this.imageResolverDaoimpl = imageResolverDaoimpl;
+    /**
+     *
+     * @param imageResolverDAO instance of DOA
+     */
+    public void setImageResolverDao(final ImageRevolverDAO imageResolverDAO) {
+        this.imageResolverDAO = imageResolverDAO;
     }
 }
